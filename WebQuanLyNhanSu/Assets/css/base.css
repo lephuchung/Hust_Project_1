@@ -1,0 +1,40 @@
+:root {
+    --xanh-dam: #0081C9;
+    --xanh-nhat: #5BC0F8;
+    --xanh-rat-nhat: #86E5FF;
+    --vang: #FFC93C;
+    --xam:#EBECF0;
+    --trang: #fff;
+    --den: #000;
+    --chu: #333;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem ;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+}
+
+
+
+
