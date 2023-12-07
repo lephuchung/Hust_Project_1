@@ -149,12 +149,12 @@
 
 .container {
     background-color: var(--xam);
-    height: 100vh;
+    height: 850px;
 }
 
 .sidebar {
     background-color: var(--xanh-rat-nhat);
-    height: 100vh;
+    height: 850px;
 }
 
 .content__sidebarList{
@@ -181,7 +181,7 @@
 
 .content {
     margin-top: 50px;
-    height: 100vh;
+    height: 800px;
 }
 
 .content > h1{
@@ -189,7 +189,7 @@
 }
 
 .content__main{
-    height:83vh;
+    height: 720px;
     background-color: var(--trang);
     padding-bottom: 10px;
     margin: 0 auto;
@@ -198,6 +198,6 @@
 }
 
 .footer {
-    height: 20vh;
+    height: 150px;
     background-color: var(--vang);
 }

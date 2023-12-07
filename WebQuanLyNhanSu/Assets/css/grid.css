@@ -276,7 +276,7 @@
 }
 
 /* PC medium resolution > */
-@media (min-width: 1113px) {
+@media (min-width: 1339px) {
     .row {
         margin-left: -0px;
         margin-right: -0px;
@@ -428,20 +428,20 @@
 }
 
 /* Tablet - PC low resolution */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 740px) and (max-width: 1199px) {
     .wide {
         width: 100%;
     }
 }
 
 /* > PC low resolution */
-@media (min-width: 1024px) and (max-width: 1239px) {
+@media (min-width: 1200px) and (max-width: 1339px) {
     .wide {
         width: 100%;
     }
 
     .wide .row {
-        margin-left: -12px;
+        margin-left: 0px;
         margin-right: -12px;
     }
 
