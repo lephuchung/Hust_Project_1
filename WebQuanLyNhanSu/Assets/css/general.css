@@ -194,7 +194,68 @@
     padding-bottom: 10px;
     margin: 0 auto;
     border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3), -3px -3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content__Form{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    margin: auto;
+    overflow-y: auto;
+    margin: 2rem;
+}
+
+.content__FormComponent{
+    width: 70%;
+    margin: 10px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#content__FormComponent--CANDEM{
+    padding-top: 15px;
+}
+
+.content__FormTitle{
+    width: 200px;
+    margin: 5px 0px;
+    font-size: 1.6rem; 
+    line-height: 2rem;
+    display: inline-block;
+}
+
+.content__FormSubTitle{
+    font-size: 1.6rem;
+    margin-right: 15px; 
+    display: inline-block;
+}
+
+.content__FormSubContainer{
+    width: 400px;
+    line-height: 2rem;
+}
+
+.content__FormRadioBtn{
+    margin-right: 25px; 
+}
+
+.content__FormInput{
+    width: 400px;
+    line-height: 2rem;
+    font-size: 1.6rem;
+}
+
+.content__FormBtn{
+    align-self: flex-end;
+    cursor: pointer;
+    background-color: var(--xanh-dam);
+    color: var(--trang);
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 1.6rem;
+    border-radius: 5px;
 }
 
 .footer {
