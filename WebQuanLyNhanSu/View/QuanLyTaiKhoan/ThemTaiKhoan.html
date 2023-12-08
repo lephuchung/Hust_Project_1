@@ -75,8 +75,70 @@
                     <div class="col l-10 m-12 c-12 content">
                         <h1>Thêm tài khoản</h1>
                         <div class="content__main">
-                            
-                        </div>
+                          <form id="AddUForm" class="content__Form" action="/addU" method="post">
+                              <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                  <label class="content__FormTitle" for="MaNhanVien">Nhập mã nhân viên: </label>
+                                  <input class="content__FormInput" id="MaNhanVien" type="text"
+                                      placeholder="VD: MNV000001" name="TenNhanVien">
+                              </div>
+                              <div class="content__FormComponent">
+                                  <label class="content__FormTitle" for="password">Nhập mật khẩu: </label>
+                                  <input class="content__FormInput" id="password" type="password"
+                                      placeholder="VD: hunghaha" name="password">
+                              </div>
+                              <div class="content__FormComponent">
+                                  <label class="content__FormTitle" for="re-password">Nhập lại mật khẩu: </label>
+                                  <input class="content__FormInput" id="re-password" type="password"
+                                      placeholder="VD: hunghaha" name="re-password">
+                              </div>  
+                              <div class="content__FormComponent">
+                                <label class="content__FormTitle">Chọn quyền tài khoản: </label>
+                                <div class="content__FormSubContainer">
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="GiamDoc" type="radio" value="Giám đốc"
+                                    name="gioitinh">
+                                    <label class="content__FormSubTitle" for="GiamDoc">Giám đốc</label>
+                                  </div>
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="PhoGiamDoc" type="radio" value="Phó giám đốc"
+                                    name="gioitinh">
+                                    <label class="content__FormSubTitle" for="PhoGiamDoc">Phó giám đốc</label>
+                                  </div>
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="TruongPhong" type="radio" value="Trưởng phòng"
+                                    name="gioitinh">
+                                    <label class="content__FormSubTitle" for="TruongPhong">Trưởng phòng</label>
+                                  </div>
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="PhoPhong" type="radio" value="Phó phòng"
+                                    name="gioitinh">
+                                    <label class="content__FormSubTitle" for="PhoPhong">Phó phòng</label>
+                                  </div>
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="TruongPhongNhanSu" type="radio" value="Trưởng phòng nhân sự"
+                                    name="gioitinh">
+                                    <label class="content__FormSubTitle" for="TruongPhongNhanSu">Trưởng phòng nhân sự</label>
+                                  </div>  
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="PhoPhongNhanSu" type="radio" value="Phó phòng nhân sự"
+                                    name="gioitinh">
+                                    <label class="content__FormSubTitle" for="PhoPhongNhanSu">Phó phòng nhân sự</label>
+                                  </div>
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="NhanVienPhongNhanSu" type="radio" value="Nhân viên phòng nhân sự"
+                                    name="gioitinh">
+                                    <label class="content__FormSubTitle" for="NhanVienPhongNhanSu">Nhân viên phòng nhân sự</label>
+                                  </div>
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="NhanVien" type="radio" value="Nhân viên"
+                                    name="gioitinh">
+                                    <label class="content__FormSubTitle" for="NhanVien">Nhân viên</label>
+                                  </div>  
+                                </div>
+                            </div>                            
+                              <input class="content__FormBtn" type="submit" value="Xác nhận">
+                          </form>
+                      </div>
                     </div>
                 </div>
             </div>
