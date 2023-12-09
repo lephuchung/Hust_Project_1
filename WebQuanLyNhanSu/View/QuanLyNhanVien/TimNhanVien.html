@@ -77,13 +77,27 @@
                     <div class="col l-10 m-12 c-12 content">
                         <h1>Tìm nhân viên</h1>
                         <div class="content__main">
-                            <div class="searchBar">
-                                <h3>Tìm kiếm theo: </h3>
-                                <input class="search Name" spellcheck="false" placeholder="Họ và tên">
-                                <input class="search CCCD" spellcheck="false" placeholder="Căn cước công dân">
-                                <input class="search MaNV" spellcheck="false" placeholder="Mã nhân viên">
-                                <button class="btn">Tìm kiếm</button>
-                            </div>
+                          <div class="searchBar">
+                            <select name="lang" id="search-select">
+                              <option value="">--Tìm kiếm theo--</option>
+                              <option value="name">Họ và tên</option>
+                              <option value="cccd">CCCD</option>
+                              <option value="maNV">Mã nhân viên</option>
+                          </select>
+                          </div>
+                          <div class="subSearchBar">
+                            <h2>Nhập thông tin:</h2>
+                            <input class="search input" spellcheck="false" placeholder="Nhập thông tin">
+                            <button class="btn">Tìm kiếm</button>
+                          </div>
+                          <div class="Sort">
+                            <select name="lang" id="sort-select">
+                              <option value="">--Sắp xếp theo--</option>
+                              <option value="name">Họ và tên</option>
+                              <option value="cccd">CCCD</option>
+                              <option value="maNV">Mã nhân viên</option>
+                            </select>
+                          </div>
                             <div class="staffTable">
                               <table border="1">
                                 <thead>

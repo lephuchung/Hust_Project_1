@@ -1,8 +1,6 @@
-.searchBar{
+.searchBar, .subSearchBar{
     --height: 66px;
     align-items: center;
-    background-color: #fff;
-    border-bottom: 1px solid #e8ebed;
     display: flex;
     font-size: 1.4rem;
     height: var(--height);
@@ -17,6 +15,7 @@
     padding: 0 16px 0 8px;
     transition: border-color .2s ease-in-out;
     margin: 0 20px;
+    width: 40%;
 }
 
 .btn{
@@ -36,7 +35,7 @@
 }
 
 table{
-    margin: 10px 0px 10px 10px;
+    margin: 10px;
     width: 98%;
     font-size: 1.4rem;
     font-family: sans-serif;
@@ -57,4 +56,21 @@ th {
 
 tr:hover{
     background-color: #e8ebed;
+}
+
+.subSearchBar{
+    border-bottom: 2px solid black;
+}
+
+.Sort{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 21px 10px 10px;
+    height: 5%;
+}
+
+#sort-select{
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    border-radius: 20px;
 }
