@@ -1,0 +1,30 @@
+.content__Filter{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 15px;
+    border-bottom: 1px solid;
+}
+
+.content_FilterComBoBox{
+    padding: 5px;
+    width: 300px;
+    margin: 5px 15px;
+    font-size: 1.6rem;
+}
+
+.content_FilterBTN{
+    padding: 5px;
+    width: 300px;
+    margin: 5px 15px;
+    font-size: 1.6rem;
+    background-color: var(--xanh-dam);
+    color: var(--trang);
+    border: none;
+}
+
+.content__AnalyseResult{
+    display: flex;
+    margin: auto;
+}

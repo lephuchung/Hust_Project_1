@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../Assets/css/base.css">
     <link rel="stylesheet" href="../../Assets/css/grid.css">
     <link rel="stylesheet" href="../../Assets/css/general.css">
+    <link rel="stylesheet" href="../../Assets/css/thongke.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Thống kê nhân viên</title>
@@ -76,7 +77,173 @@
                     <div class="col l-10 m-12 c-12 content">
                         <h1>Thống kê nhân viên</h1>
                         <div class="content__main">
-                            
+                            <div class="content__Filter">
+                              
+                                <select class="col l-3 m-5 c-10 content_FilterComBoBox" id="DoTuoi" name="DoTuoi" size="1">
+                                  <option value="Độ Tuổi">Độ tuổi</option>
+                                  <option value="Dưới 20 tuổi">Dưới 20 tuổi</option>
+                                  <option value="Từ 21 đến 25 tuổi">Từ 21 đến 25 tuổi</option>
+                                  <option value="Từ 26 đến 30 tuổi">Từ 26 đến 30 tuổi</option>
+                                  <option value="Từ 31 đến 35 tuổi">Từ 31 đến 35 tuổi</option>
+                                  <option value="Từ 36 đến 40 tuổi">Từ 36 đến 40 tuổi</option>
+                                  <option value="Từ 41 đến 45 tuổi">Từ 41 đến 45 tuổi</option>
+                                  <option value="Từ 46 đến 50 tuổi">Từ 46 đến 50 tuổi</option>
+                                  <option value="Từ 51 đến 55 tuổi">Từ 51 đến 55 tuổi</option>
+                                  <option value="Trên 55 tuổi">Trên 55 tuổi</option>
+                                </select>
+                                <select class="col l-3 m-5 c-10 content_FilterComBoBox " id="GioiTinh" name="GioiTinh">
+                                  <option value="Giới tính">Giới tính</option>
+                                  <option value="Nam">Nam</option>
+                                  <option value="Nữ">Nữ</option>
+                                </select>
+                                <select class="col l-3 m-5 c-10 content_FilterComBoBox " id="QueQuan" name="QueQuan">
+                                  <option value="Quê quán">Quê quán</option>
+                                  <option value="An Giang">An Giang</option>
+                                  <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                  <option value="Bạc Liêu">Bạc Liêu</option>
+                                  <option value="Bắc Giang">Bắc Giang</option>
+                                  <option value="Bắc Kạn">Bắc Kạn</option>
+                                  <option value="Bắc Ninh">Bắc Ninh</option>
+                                  <option value="Bến Tre">Bến Tre</option>
+                                  <option value="Bình Dương">Bình Dương</option>
+                                  <option value="Bình Định">Bình Định</option>
+                                  <option value="Bình Phước">Bình Phước</option>
+                                  <option value="Bình Thuận">Bình Thuận</option>
+                                  <option value="Cà Mau">Cà Mau</option>
+                                  <option value="Cao Bằng">Cao Bằng</option>
+                                  <option value="Cần Thơ">Cần Thơ</option>
+                                  <option value="Đà Nẵng">Đà Nẵng</option>
+                                  <option value="Đắk Lắk">Đắk Lắk</option>
+                                  <option value="Đắk Nông">Đắk Nông</option>
+                                  <option value="Điện Biên">Điện Biên</option>
+                                  <option value="Đồng Nai">Đồng Nai</option>
+                                  <option value="Đồng Tháp">Đồng Tháp</option>
+                                  <option value="Gia Lai">Gia Lai</option>
+                                  <option value="Hà Giang">Hà Giang</option>
+                                  <option value="Hà Nam">Hà Nam</option>
+                                  <option value="Hà Nội">Hà Nội</option>
+                                  <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                  <option value="Hải Dương">Hải Dương</option>
+                                  <option value="Hải Phòng">Hải Phòng</option>
+                                  <option value="Hậu Giang">Hậu Giang</option>
+                                  <option value="Hòa Bình">Hòa Bình</option>
+                                  <option value="Thành phố Hồ Chí Minh">Thành phố Hồ Chí Minh</option>
+                                  <option value="Hưng Yên">Hưng Yên</option>
+                                  <option value="Khánh Hòa">Khánh Hòa</option>
+                                  <option value="Kiên Giang">Kiên Giang</option>
+                                  <option value="Kon Tum">Kon Tum</option>
+                                  <option value="Lai Châu">Lai Châu</option>
+                                  <option value="Lạng Sơn">Lạng Sơn</option>
+                                  <option value="Lào Cai">Lào Cai</option>
+                                  <option value="Lâm Đồng">Lâm Đồng</option>
+                                  <option value="Long An">Long An</option>
+                                  <option value="Nam Định">Nam Định</option>
+                                  <option value="Nghệ An">Nghệ An</option>
+                                  <option value="Ninh Bình">Ninh Bình</option>
+                                  <option value="Ninh Thuận">Ninh Thuận</option>
+                                  <option value="Phú Thọ">Phú Thọ</option>
+                                  <option value="Phú Yên">Phú Yên</option>
+                                  <option value="Quảng Bình">Quảng Bình</option>
+                                  <option value="Quảng Nam">Quảng Nam</option>
+                                  <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                  <option value="Quảng Ninh">Quảng Ninh</option>
+                                  <option value="Quảng Trị">Quảng Trị</option>
+                                  <option value="Sóc Trăng">Sóc Trăng</option>
+                                  <option value="Sơn La">Sơn La</option>
+                                  <option value="Tây Ninh">Tây Ninh</option>
+                                  <option value="Thái Bình">Thái Bình</option>
+                                  <option value="Thái Nguyên">Thái Nguyên</option>
+                                  <option value="Thanh Hóa">Thanh Hóa</option>
+                                  <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                  <option value="Tiền Giang">Tiền Giang</option>
+                                  <option value="Trà Vinh">Trà Vinh</option>
+                                  <option value="Tuyên Quang">Tuyên Quang</option>
+                                  <option value="Vĩnh Long">Vĩnh Long</option>
+                                  <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                  <option value="Yên Bái">Yên Bái</option>
+                                  <option value="Khác">Khác</option>
+                                </select>
+                                <select class="col l-3 m-5 c-10 content_FilterComBoBox " id="QuanHuyen" name="QuanHuyen">
+                                  <option value="Quận huyện hiện tại">Quận huyện hiện tại</option>
+                                  <option value="Quận Ba Đình">Quận Ba Đình</option>
+                                  <option value="Quận Hoàn Kiếm">Quận Hoàn Kiếm</option>
+                                  <option value="Quận Tây Hồ">Quận Tây Hồ</option>
+                                  <option value="Quận Long Biên">Quận Long Biên</option>
+                                  <option value="Quận Cầu Giấy">Quận Cầu Giấy</option>
+                                  <option value="Quận Đống Đa">Quận Đống Đa</option>
+                                  <option value="Quận Hai Bà Trưng">Quận Hai Bà Trưng</option>
+                                  <option value="Quận Hoàng Mai">Quận Hoàng Mai</option>
+                                  <option value="Quận Thanh Xuân">Quận Thanh Xuân</option>
+                                  <option value="Quận Hà Đông">Quận Hà Đông</option>
+                                  <option value="Quận Bắc Từ Liêm">Quận Bắc Từ Liêm</option>
+                                  <option value="Quận Nam Từ Liêm">Quận Nam Từ Liêm</option>
+                                  <option value="Thị xã Sơn Tây">Thị xã Sơn Tây</option>
+                                  <option value="Huyện Ba Vì">Huyện Ba Vì</option>
+                                  <option value="Huyện Chương Mỹ">Huyện Chương Mỹ</option>
+                                  <option value="Huyện Đan Phượng">Huyện Đan Phượng</option>
+                                  <option value="Huyện Đông Anh">Huyện Đông Anh</option>
+                                  <option value="Huyện Gia Lâm">Huyện Gia Lâm</option>
+                                  <option value="Huyện Hoài Đức">Huyện Hoài Đức</option>
+                                  <option value="Huyện Mê Linh">Huyện Mê Linh</option>
+                                  <option value="Huyện Mỹ Đức">Huyện Mỹ Đức</option>
+                                  <option value="Huyện Phú Xuyên">Huyện Phú Xuyên</option>
+                                  <option value="Huyện Phúc Thọ">Huyện Phúc Thọ</option>
+                                  <option value="Huyện Quốc Oai">Huyện Quốc Oai</option>
+                                  <option value="Huyện Sóc Sơn">Huyện Sóc Sơn</option>
+                                  <option value="Huyện Thạch Thất">Huyện Thạch Thất</option>
+                                  <option value="Huyện Thanh Oai">Huyện Thanh Oai</option>
+                                  <option value="Huyện Thanh Trì">Huyện Thanh Trì</option>
+                                  <option value="Huyện Thường Tín">Huyện Thường Tín</option>
+                                  <option value="Huyện Ứng Hòa">Huyện Ứng Hòa</option>
+                                  <option value="Khác">Khác</option>
+                                </select>
+                                <select class="col l-3 m-5 c-10 content_FilterComBoBox " id="TonGiao" name="TonGiao">
+                                  <option value="Tôn Giáo">Tôn Giáo</option>
+                                  <option value="Phật Giáo">Phật Giáo</option>
+                                  <option value="Thiên Chúa Giáo">Thiên Chúa Giáo</option>
+                                  <option value="Không">Không</option>
+                                  <option value="Khác">Khác</option>
+                                </select>
+                                <select class="col l-3 m-5 c-10 content_FilterComBoBox " id="ChucVu" name="ChucVu">
+                                  <option value="Chức vụ">Chức vụ</option>
+                                  <option value="Giám đốc">Giám đốc</option>
+                                  <option value="Phó giám đốc">Phó giám đốc</option>
+                                  <option value="Trưởng phòng">Trưởng phòng</option>
+                                  <option value="Phó phòng">Phó phòng</option>
+                                  <option value="Nhân viên">Nhân viên</option>
+                                </select>
+                                <select class="col l-3 m-5 c-10 content_FilterComBoBox " id="ThangSinh" name="ThangSinh">
+                                  <option value="Tháng sinh">Tháng sinh</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                  <option value="11">11</option>
+                                  <option value="12">12</option>
+                                </select>
+                                <select class="col l-3 m-5 c-10 content_FilterComBoBox " id="Email" name="Email">
+                                  <option value="Email">Email</option>
+                                  <option value="Google">Google</option>
+                                  <option value="Yahoo">Yahoo</option>
+                                  <option value="Outlook">Outlook</option>
+                                  <option value="Khác">Khác</option>
+                                </select>
+                                <button class="col l-3 m-5 c-10 content_FilterBTN">Duyệt</button>
+                            </div>
+                            <div class="content__AnalyseResult">
+                              <div class="col l-5 m-5 c-10 content__AnalyseDiagram">
+                                
+                              </div>
+                              <div class="col l-5 m-5 c-0 content_AnalyseTable">
+                                
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
