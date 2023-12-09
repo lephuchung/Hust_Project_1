@@ -244,6 +244,7 @@
     width: 400px;
     line-height: 2rem;
     font-size: 1.6rem;
+    padding-left: 5px;
 }
 
 .content__FormBtn{
@@ -256,6 +257,98 @@
     height: 40px;
     font-size: 1.6rem;
     border-radius: 5px;
+}
+
+.content__SearchMethod{
+    font-size: 1.6rem;
+    padding: 15px 0px 0px 15px;
+}
+
+.content__SearchMethodCBB{
+    width: 150px;
+}
+
+.content__SearchBar{
+    display: flex;
+    margin: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid;
+}
+
+.content__SearchBarLabel{
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+.content__SearchBarInput{
+    flex: 1;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    margin: 0 15px;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+.content__SearchBarBtn{
+    line-height: 3rem;
+    width: 100px;
+    border: none;
+    background-color: var(--xanh-dam);
+    color: var(--trang);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+
+
+.content__MiniTableArea{
+    width: 95%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid ;
+}
+
+.content__TableSort{
+    width: 150px;
+    font-size: 1.4rem;
+    margin: 0 0 15px 0;
+    align-self: flex-end;
+}
+
+.content__MiniTable{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    height: 200px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 1.2rem;
+}
+
+.content__TableTitle{
+    background-color: var(--xanh-rat-nhat);
+    border: 1px solid var(--den);
+}
+
+.content__InfomationDetail{
+    display: flex;
+    flex-direction: column;
+    margin: 35px;
+}
+
+.content__InfomationLabel{
+    width: 200px;
+    font-size: 1.6rem;
+    padding-bottom: 10px;
 }
 
 .footer {
