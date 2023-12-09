@@ -76,45 +76,28 @@
                     <div class="col l-10 m-12 c-12 content">
                         <h1>Tìm thông tin tài khoản</h1>
                         <div class="content__main">
-                          <div class="searchBar">
-                            <select name="lang" id="searchBar__select">
-                              <option value="">--Tìm kiếm theo--</option>
-                              <option value="name">Họ và tên</option>
-                              <option value="cccd">CCCD</option>
-                              <option value="maNV">Mã nhân viên</option>
-                          </select>
-                            <input class="searchBar__input" spellcheck="false" placeholder="Nhập thông tin">
-                            <button class="searchBar__btn">Tìm kiếm</button>
-                          </div>
-                          <div class="Sort">
-                            <select name="lang" id="Sort__select">
-                              <option value="">--Sắp xếp theo--</option>
-                              <option value="name">Họ và tên</option>
-                              <option value="cccd">CCCD</option>
-                              <option value="maNV">Mã nhân viên</option>
-                            </select>
-                          </div>
-                            <div class="staffTable">
-                              <table border="1">
-                                <thead>
-                                  <tr>
-                                    <th>Tên</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Email</th>
-                                    <th>Chức vụ</th>
-                                    <th>Mức lương cơ bản</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th>Dang Tran Nam Khanh</th>
-                                    <th>Số điện thoại</th>
-                                    <th>AAAAAAAAAAAAAAAAAAAA</th>
-                                    <th>Chức vụ</th>
-                                    <th>Mức lương cơ bản</th>
-                                  </tr>
-                              </table>
+                          <div class="content__Search">
+                            <div class="content__SearchMethod">
+                              <select name="lang" class="content__SearchMethodCBB">
+                                <option value="">--Tìm kiếm theo--</option>
+                                <option value="cccd">CCCD</option>
+                                <option value="maNV">Mã nhân viên</option>
+                              </select>
                             </div>
+                            <div class="content__SearchBar">
+                              <label for="content__SearchBarInput" class="content__SearchBarLabel">Nhập thông tin: </label>
+                              <input class="content__SearchBarInput" id="content__SearchBarInput" spellcheck="false"
+                                placeholder="VD: MNV000001, 031212453123">
+                              <button class="content__SearchBarBtn">Tìm Kiếm</button>
+                            </div>
+                          </div>
+                          <div class="content__InfomationDetail">
+                            <label for="" class="content__InfomationLabel">Mã Nhân viên: </label>
+                            <label for="" class="content__InfomationLabel">Họ và tên: </label>
+                            <label for="" class="content__InfomationLabel">CCCD/CMND: </label>
+                            <label for="" class="content__InfomationLabel">Mật khẩu: </label>
+                            <label for="" class="content__InfomationLabel">Quyền tài khoản: </label>
+                          </div>                          
                         </div>
                     </div>
                 </div>
