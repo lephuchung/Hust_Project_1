@@ -4,7 +4,7 @@
     font-size: 1.4rem;
     height: 10%;
     padding: 0 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-bottom: 2px solid black;
 }
 
@@ -24,7 +24,7 @@
     background-color: transparent;
     outline: none;
     cursor: pointer;
-    padding: 12px 38px;
+    padding: 10px 28px;
     border-radius: 20px;
     transition: opacity .2s ease;
 }
