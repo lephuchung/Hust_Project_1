@@ -266,6 +266,7 @@
 
 .content__SearchMethodCBB{
     width: 150px;
+    cursor: pointer;
 }
 
 .content__SearchBar{
@@ -314,6 +315,7 @@
     font-size: 1.4rem;
     margin: 0 0 15px 0;
     align-self: flex-end;
+    cursor: pointer;
 }
 
 .content__MiniTable{
@@ -342,7 +344,7 @@ th, td {
 .content__InfomationDetail{
     display: flex;
     flex-direction: column;
-    margin: 35px;
+    margin: 15px 45px;
 }
 
 .content__InfomationLabel{
