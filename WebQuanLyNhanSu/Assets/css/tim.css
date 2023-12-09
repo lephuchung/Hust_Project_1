@@ -77,3 +77,8 @@ tr:hover{
 #Sort__select:hover,#searchBar__select:hover{
     cursor: pointer;
 }
+
+.staffTable{
+    max-width: 100%;
+    overflow-x: auto;
+}
