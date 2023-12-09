@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../Assets/css/base.css">
     <link rel="stylesheet" href="../../Assets/css/grid.css">
     <link rel="stylesheet" href="../../Assets/css/general.css">
-    <link rel="stylesheet" href="../../Assets/css/tim.css">
+    <!-- <link rel="stylesheet" href="../../Assets/css/tim.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Tìm thông tin lương nhân viên</title>
@@ -73,56 +73,62 @@
                     <div class="col l-10 m-12 c-12 content">
                         <h1>Tìm thông tin lương nhân viên</h1>
                         <div class="content__main">
-                          <div class="searchBar">
-                            <select name="lang" id="searchBar__select">
-                              <option value="">--Tìm kiếm theo--</option>
-                              <option value="name">Họ và tên</option>
-                              <option value="cccd">CCCD</option>
-                              <option value="maNV">Mã nhân viên</option>
-                          </select>
-                            <input class="searchBar__input" spellcheck="false" placeholder="Nhập thông tin">
-                            <button class="searchBar__btn">Tìm kiếm</button>
-                          </div>
-                          <div class="Sort">
-                            <select name="lang" id="Sort__select">
-                              <option value="">--Sắp xếp theo--</option>
-                              <option value="name">Họ và tên</option>
-                              <option value="cccd">CCCD</option>
-                              <option value="maNV">Mã nhân viên</option>
-                            </select>
-                          </div>
-                            <div class="staffTable">
-                              <table border="1">
+                          <div class="content__Search">
+                            <div class="content__SearchMethod">
+                              <select name="lang" class="content__SearchMethodCBB">
+                                <option value="">--Tìm kiếm theo--</option>
+                                <option value="name">Họ và tên</option>
+                                <option value="cccd">CCCD</option>
+                                <option value="maNV">Mã nhân viên</option>
+                              </select>
+                            </div>
+                            <div class="content__SearchBar">
+                              <label for="content__SearchBarInput" class="content__SearchBarLabel">Nhập thông tin: </label>
+                              <input class="content__SearchBarInput" id="content__SearchBarInput" spellcheck="false"
+                                placeholder="Nhập thông tin">
+                              <button class="content__SearchBarBtn">Tìm Kiếm</button>
+                            </div>
+                          </div>                          <div class="Sort">
+                            <div class="content__MiniTableArea">
+                              <select name="lang" class="content__TableSort">
+                                <option value="">--Sắp xếp theo--</option>
+                                <option value="maNV">Mã nhân viên</option>
+                                <option value="name">Họ và tên</option>
+                                <option value="Ngày sinh">Ngày sinh</option>
+                                <option value="Chức vụ">Chức vụ</option>
+                                <option value="Mức lương cơ bản">Mức lương cơ bản</option>
+                                <option value="cccd">CCCD</option>
+                              </select>
+                              <table class="content__MiniTable">
                                 <thead>
-                                  <tr>
-                                    <th>Tên</th>
-                                    <th>Ngày sinh</th>
-                                    <th>Giới tính</th>
-                                    <th>Địa chỉ</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Email</th>
-                                    <th>Quê quán</th>
-                                    <th>Tôn giáo</th>
-                                    <th>Chức vụ</th>
-                                    <th>Mức lương cơ bản</th>
+                                  <tr class="content__TableTitle">
+                                    <th class="content__TableTitle"></th>
+                                    <th class="content__TableTitle">Mã lương</th>
+                                    <th class="content__TableTitle">Mã nhân viên</th>
+                                    <th class="content__TableTitle">Họ và tên</th>
+                                    <th class="content__TableTitle">CCCD</th>
+                                    <th class="content__TableTitle">Thời gian</th>
+                                    <th class="content__TableTitle">Lương cơ bản</th>
+                                    <th class="content__TableTitle">Thưởng</th>
+                                    <th class="content__TableTitle">Phạt</th>
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <th>Dang Tran Nam Khanh</th>
-                                    <th>Ngày sinh</th>
-                                    <th>Giới tính</th>
-                                    <th>Địa chỉ</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Aaaaaaaaaaaaaaa</th>
-                                    <th>Quê quán</th>
-                                    <th>Tôn giáo</th>
-                                    <th>Chức vụ</th>
-                                    <th>Mức lương cơ bản</th>
-                                  </tr>
+              
+                                </tbody>
                               </table>
                             </div>
-                    </div>
+                            <div class="content__InfomationDetail">
+                              <label for="" class="content__InfomationLabel">Mã lương: </label>
+                              <label for="" class="content__InfomationLabel">Mã nhân viên: </label>
+                              <label for="" class="content__InfomationLabel">Họ và tên: </label>
+                              <label for="" class="content__InfomationLabel">CCCD/CMND: </label>
+                              <label for="" class="content__InfomationLabel">Thời gian: </label>
+                              <label for="" class="content__InfomationLabel">Lương cơ bản: </label>
+                              <label for="" class="content__InfomationLabel">Thưởng: </label>
+                              <label for="" class="content__InfomationLabel">Phạt: </label>
+
+                            </div>                    
                         </div>
                     </div>
                 </div>
