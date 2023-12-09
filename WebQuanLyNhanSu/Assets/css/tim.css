@@ -1,24 +1,24 @@
-.searchBar, .subSearchBar{
-    --height: 66px;
+.searchBar{
     align-items: center;
     display: flex;
     font-size: 1.4rem;
-    height: var(--height);
-    padding: 0 28px;
-    justify-content: flex-start;
+    height: 10%;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid black;
 }
 
-.search{
+.searchBar__input{
     border: 2px solid #e8e8e8;
     border-radius: 20px;
     height: 40px;
     padding: 0 16px 0 8px;
     transition: border-color .2s ease-in-out;
     margin: 0 20px;
-    width: 40%;
+    width: 400px;
 }
 
-.btn{
+.searchBar__btn{
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
@@ -29,16 +29,17 @@
     transition: opacity .2s ease;
 }
 
-.btn:hover{
+.searchBar__btn:hover{
     background-color: black;
     color: #fff;
 }
 
 table{
-    margin: 10px;
+    position: relative;
     width: 98%;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     font-family: sans-serif;
+    margin: 10px;
 }
 
 table, td, th {
@@ -58,10 +59,6 @@ tr:hover{
     background-color: #e8ebed;
 }
 
-.subSearchBar{
-    border-bottom: 2px solid black;
-}
-
 .Sort{
     display: flex;
     justify-content: flex-end;
@@ -69,8 +66,12 @@ tr:hover{
     height: 5%;
 }
 
-#sort-select{
-    font-size: 1.4rem;
+#Sort__select{
+    font-size: 1.4em;
     font-family: sans-serif;
     border-radius: 20px;
+}
+
+#Sort__select:hover,#searchBar__select:hover{
+    cursor: pointer;
 }
