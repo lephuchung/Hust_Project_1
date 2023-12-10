@@ -354,6 +354,10 @@ th, td {
     padding-bottom: 10px;
 }
 
+.checkbox_chung{
+    cursor: pointer;
+}
+
 .footer {
     height: 150px;
     background-color: var(--vang);
