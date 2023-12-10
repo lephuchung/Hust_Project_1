@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table with Radio Buttons</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="radio" name="rowSelect" onclick="displayRowInfo(this)"></td>
+      <td>John Doe</td>
+      <td>john@example.com</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="rowSelect" onclick="displayRowInfo(this)"></td>
+      <td>Jane Doe</td>
+      <td>jane@example.com</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+<script>
+  function displayRowInfo(radio) {
+    var selectedRow = radio.closest('tr');
+    var cells = selectedRow.getElementsByTagName("td");
+    var rowData = Array.from(cells).map(cell => cell.innerText);
+
+    // Delay 0.5 seconds before displaying the information
+    setTimeout(function() {
+      alert("Selected Row: " + rowData.join(', '));
+    }, 500);
+  }
+</script>
+
+</body>
+</html>

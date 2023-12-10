@@ -76,7 +76,96 @@
                     <div class="col l-10 m-12 c-12 content">
                         <h1>Sửa thông tin nhân viên</h1>
                         <div class="content__main">
-                            
+                          <div class="content__Search">
+                            <div class="content__SearchMethod">
+                              <select name="lang" class="content__SearchMethodCBB">
+                                <option value="">--Tìm kiếm theo--</option>
+                                <option value="name">Họ và tên</option>
+                                <option value="cccd">CCCD</option>
+                                <option value="maNV">Mã nhân viên</option>
+                              </select>
+                            </div>
+                            <div class="content__SearchBar">
+                              <label for="content__SearchBarInput" class="content__SearchBarLabel">Nhập thông tin: </label>
+                              <input class="content__SearchBarInput" id="content__SearchBarInput" spellcheck="false"
+                                placeholder="VD: Nguyen A, MNV000001,...">
+                              <button class="content__SearchBarBtn">Tìm Kiếm</button>
+                            </div>
+                          </div>
+                          <div class="content__MiniTableArea">
+                            <select name="lang" class="content__TableSort">
+                              <option value="">--Sắp xếp theo--</option>
+                              <option value="maNV">Mã nhân viên</option>
+                              <option value="name">Họ và tên</option>
+                              <option value="Ngày sinh">Ngày sinh</option>
+                              <option value="Chức vụ">Chức vụ</option>
+                              <option value="Mức lương cơ bản">Mức lương cơ bản</option>
+                              <option value="cccd">CCCD</option>
+                            </select>
+                            <table class="content__MiniTable">
+                              <thead>
+                                <tr class="content__TableTitle">
+                                  <th class="content__TableTitle"></th>
+                                  <th class="content__TableTitle">Mã nhân viên</th>
+                                  <th class="content__TableTitle">Họ và tên</th>
+                                  <th class="content__TableTitle">Ngày sinh</th>
+                                  <th class="content__TableTitle">Giới tính</th>
+                                  <th class="content__TableTitle">CCCD</th>
+                                  <th class="content__TableTitle">Địa chỉ</th>
+                                  <th class="content__TableTitle">Số điện thoại</th>
+                                  <th class="content__TableTitle">Email</th>
+                                  <th class="content__TableTitle">Quê quán</th>
+                                  <th class="content__TableTitle">Tôn giáo</th>
+                                  <th class="content__TableTitle">Chức vụ</th>
+                                  <th class="content__TableTitle">Mức lương cơ bản</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+            
+                              </tbody>
+                            </table>
+                          </div>
+                          <form id="AddUForm" class="content__Form" action="/addU" method="post">
+                            <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                <input class="content__FormInput" id="ten" type="text"
+                                    placeholder="VD: Nguyễn Văn A" name="TenNhanVien">
+                            </div>
+                            <div class="content__FormComponent">
+                                <input type="date" class="content__FormInput" id="txtDate" min="1900-01-01"
+                                    name="txtDate">
+                            </div>
+                            <div class="content__FormComponent">
+                                <input class="content__FormInput" id="DiaChi" type="text"
+                                    placeholder="VD: 7 Tạ Quang Bửu, Hai Bà Trưng, Hà Nội" name="DiaChi">
+                            </div>
+                            <div class="content__FormComponent">
+                                <div class="content__FormSubContainer">
+                                    <label class="content__FormSubTitle" for="GioiTinhNam">Nam</label>
+                                    <input class="content__FormRadioBtn" id="GioiTinhNam" type="radio" value="Nam"
+                                        name="gioitinh">
+                                    <label class="content__FormSubTitle" for="GioiTinhNu">Nữ</label>
+                                    <input class="content__FormRadioBtn" id="GioiTinhNu" type="radio" value="Nữ"
+                                        name="gioitinh">
+                                </div>
+                            </div>
+                            <div class="content__FormComponent">
+                                <input class="content__FormInput" id="SoDienThoai" type="text"
+                                    placeholder="VD: 0123456789" name="SoDienThoai">
+                            </div>
+                            <div class="content__FormComponent">
+                                <input class="content__FormInput" id="Email" type="text"
+                                    placeholder="VD: abc@gmail.com" name="Email">
+                            </div>
+                            <div class="content__FormComponent">
+                                <input class="content__FormInput" id="QueQuan" type="text"
+                                    placeholder="VD: Hải Phòng" name="QueQuan">
+                            </div>
+                            <div class="content__FormComponent">
+                                <input class="content__FormInput" id="CCCD/CMND" type="text"
+                                    placeholder="VD: 031203307891" name="CCCD/CMND">
+                            </div>
+                            <input class="col l-o-10 m-o-10 c-o-5 content__FormBtn" type="submit" value="Xác nhận">
+                        </form>
                         </div>
                     </div>
                 </div>
