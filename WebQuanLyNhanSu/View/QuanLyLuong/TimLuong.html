@@ -1,145 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="../../Assets/img/Poseidon Of Sea Logo.png"/>
-    <link rel="stylesheet" href="../../Assets/css/preset.css">
-    <link rel="stylesheet" href="../../Assets/css/base.css">
-    <link rel="stylesheet" href="../../Assets/css/grid.css">
-    <link rel="stylesheet" href="../../Assets/css/general.css">
-    <!-- <link rel="stylesheet" href="../../Assets/css/tim.css"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <title>Tìm thông tin lương nhân viên</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="../../Assets/img/Poseidon Of Sea Logo.png" />
+  <link rel="stylesheet" href="../../Assets/css/preset.css">
+  <link rel="stylesheet" href="../../Assets/css/base.css">
+  <link rel="stylesheet" href="../../Assets/css/grid.css">
+  <link rel="stylesheet" href="../../Assets/css/general.css">
+  <!-- <link rel="stylesheet" href="../../Assets/css/tim.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Tìm thông tin lương nhân viên</title>
 </head>
+
 <body>
-    <div id="main">
+  <div id="main">
 
-        <!-- header -->
-        <div class="header">
-            <div class="header__logo">
-                <a href="../Home.html"> <img src="../../Assets/img/Poseidon Of Sea Logo.png" alt="Logo công ty" class="header__logoImg" ></a>
-            </div>
-            <div class="header__navbar">
-                <ul class="header__navbarList">
-                    <li class="header__navbarItem"><a id="chucnang" class="header__navbarItemLink" href="">Chức năng &nbsp<i class="ti-angle-down"></i> </a>
-                        <i class="ti-angle-down"></i>
-                        <ul class="header__subnav">
-                          <li class="header__subnavListItem">
-                            <a class="header__subnavLink" href="../QuanLyNhanVien/QuanLyNhanVien.html">Quản lý nhân viên</a>
-                            <ul class="header__subSubnav">
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyNhanVien/ThemNhanVien.html">Thêm nhân viên</a></li>
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyNhanVien/SuaNhanVien.html">Sửa nhân viên</a></li>
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyNhanVien/XoaNhanVien.html">Xóa nhân viên</a></li>
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyNhanVien/TimNhanVien.html">Tìm kiếm nhân viên</a></li>
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyNhanVien/ThongKeNhanVien.html">Thống kê nhân viên</a></li>
-                            </ul>
-                          </li>
-                          <li class="header__subnavListItem">
-                            <a class="header__subnavLink" href="../QuanLyLuong/QuanLyLuong.html">Quản lý lương</a>
-                            <ul class="header__subSubnav">
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyLuong/SuaLuong.html">Sửa lương</a></li>
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyLuong/TimLuong.html">Tìm lương</a></li>
-                            </ul>
-                          </li>
-                          <li class="header__subnavListItem">
-                            <a class="header__subnavLink" href="../QuanLyTaiKhoan/QuanLyTaiKhoan.html">Quản lý tài khoản</a>
-                            <ul class="header__subSubnav">
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyTaiKhoan/ThemTaiKhoan.html">Thêm tài khoản</a></li>
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyTaiKhoan/SuaTaiKhoan.html">Sửa tài khoản</a></li>
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyTaiKhoan/XoaTaiKhoan.html">Xóa tài khoản</a></li>
-                              <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyTaiKhoan/TimTaiKhoan.html">Tìm tài khoản</a></li>
-                            </ul>
-                          </li>
-                        </ul></li>
-                    <li class="header__navbarItem"><a href="../Help.html" class="header__navbarItemLink">Hỗ trợ</a></li>
-                    <li class="header__navbarItem"><a href="../Home.html" class="header__navbarItemLink">Trang chủ</a></li>
-                    <li class="header__navbarItem"><a href="../Profile.html" class="header__navbarItemLink"><img src="../../Assets/img/Poseidon Of Sea Logo.png" alt="avt nhân viên" class="header__navbarAvt"></a></li>
+    <!-- header -->
+    <div class="header">
+      <div class="header__logo">
+        <a href="../Home.html"> <img src="../../Assets/img/Poseidon Of Sea Logo.png" alt="Logo công ty"
+            class="header__logoImg"></a>
+      </div>
+      <div class="header__navbar">
+        <ul class="header__navbarList">
+          <li class="header__navbarItem"><a id="chucnang" class="header__navbarItemLink" href="">Chức năng &nbsp<i
+                class="ti-angle-down"></i> </a>
+            <i class="ti-angle-down"></i>
+            <ul class="header__subnav">
+              <li class="header__subnavListItem">
+                <a class="header__subnavLink" href="../QuanLyNhanVien/QuanLyNhanVien.html">Quản lý nhân viên</a>
+                <ul class="header__subSubnav">
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyNhanVien/ThemNhanVien.html">Thêm nhân viên</a></li>
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyNhanVien/SuaNhanVien.html">Sửa nhân viên</a></li>
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyNhanVien/XoaNhanVien.html">Xóa nhân viên</a></li>
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyNhanVien/TimNhanVien.html">Tìm kiếm nhân viên</a></li>
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyNhanVien/ThongKeNhanVien.html">Thống kê nhân viên</a></li>
                 </ul>
-            </div>
-        </div>
-        <!-- container-->
-        <div class="container">
-            <div class="grid wide">
-                <div class="wide row">
-                    <div class="col l-2 m-0 c-0 sidebar">
-                        <ul class="content__sidebarList">
-                            <li id="content__sidebarItem_CANDEM" class="content__sidebarItem"><a href="QuanLyLuong.html" class="content__sidebarLink">Quản lý lương</a></li>
-                            <li class="content__sidebarItem"><a href="SuaLuong.html" class="content__sidebarLink">Sửa lương</a></li>
-                            <li class="content__sidebarItem"><a href="TimLuong.html" class="content__sidebarLink">Tìm lương</a></li>
-                        </ul>
-                    </div>
-                    <div class="col l-10 m-12 c-12 content">
-                        <h1>Tìm thông tin lương nhân viên</h1>
-                        <div class="content__main">
-                          <div class="content__Search">
-                            <div class="content__SearchMethod">
-                              <select name="lang" class="content__SearchMethodCBB">
-                                <option value="">--Tìm kiếm theo--</option>
-                                <option value="name">Họ và tên</option>
-                                <option value="cccd">CCCD</option>
-                                <option value="maNV">Mã nhân viên</option>
-                              </select>
-                            </div>
-                            <div class="content__SearchBar">
-                              <label for="content__SearchBarInput" class="content__SearchBarLabel">Nhập thông tin: </label>
-                              <input class="content__SearchBarInput" id="content__SearchBarInput" spellcheck="false"
-                                placeholder="VD: Nguyen A, MNV000001">
-                              <button class="content__SearchBarBtn">Tìm Kiếm</button>
-                            </div>
-                          </div>                          <div class="Sort">
-                            <div class="content__MiniTableArea">
-                              <select name="lang" class="content__TableSort">
-                                <option value="">--Sắp xếp theo--</option>
-                                <option value="maNV">Mã lương</option>
-                                <option value="maNV">Mã nhân viên</option>
-                                <option value="name">Họ và tên</option>
-                                <option value="Thời gian">Thời gian</option>
-                                <option value="Mức lương cơ bản">Mức lương cơ bản</option>
-                                <option value="cccd">CCCD</option>
-                              </select>
-                              <table class="content__MiniTable">
-                                <thead>
-                                  <tr class="content__TableTitle">
-                                    <th class="content__TableTitle"></th>
-                                    <th class="content__TableTitle">Mã lương</th>
-                                    <th class="content__TableTitle">Mã nhân viên</th>
-                                    <th class="content__TableTitle">Họ và tên</th>
-                                    <th class="content__TableTitle">CCCD</th>
-                                    <th class="content__TableTitle">Thời gian</th>
-                                    <th class="content__TableTitle">Lương cơ bản</th>
-                                    <th class="content__TableTitle">Thưởng</th>
-                                    <th class="content__TableTitle">Phạt</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-              
-                                </tbody>
-                              </table>
-                            </div>
-                            <div class="content__InfomationDetail">
-                              <label for="" class="content__InfomationLabel">Mã lương: </label>
-                              <label for="" class="content__InfomationLabel">Mã nhân viên: </label>
-                              <label for="" class="content__InfomationLabel">Họ và tên: </label>
-                              <label for="" class="content__InfomationLabel">CCCD/CMND: </label>
-                              <label for="" class="content__InfomationLabel">Thời gian: </label>
-                              <label for="" class="content__InfomationLabel">Lương cơ bản: </label>
-                              <label for="" class="content__InfomationLabel">Thưởng: </label>
-                              <label for="" class="content__InfomationLabel">Phạt: </label>
-
-                            </div>                    
-                        </div>
-                    </div>
+              </li>
+              <li class="header__subnavListItem">
+                <a class="header__subnavLink" href="../QuanLyLuong/QuanLyLuong.html">Quản lý lương</a>
+                <ul class="header__subSubnav">
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyLuong/SuaLuong.html">Sửa lương</a></li>
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyLuong/TimLuong.html">Tìm lương</a></li>
+                </ul>
+              </li>
+              <li class="header__subnavListItem">
+                <a class="header__subnavLink" href="../QuanLyTaiKhoan/QuanLyTaiKhoan.html">Quản lý tài khoản</a>
+                <ul class="header__subSubnav">
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyTaiKhoan/ThemTaiKhoan.html">Thêm tài khoản</a></li>
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyTaiKhoan/SuaTaiKhoan.html">Sửa tài khoản</a></li>
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyTaiKhoan/XoaTaiKhoan.html">Xóa tài khoản</a></li>
+                  <li class="header__subSubnavListItem"><a class="header__subSubnavLink"
+                      href="../QuanLyTaiKhoan/TimTaiKhoan.html">Tìm tài khoản</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="header__navbarItem"><a href="../Help.html" class="header__navbarItemLink">Hỗ trợ</a></li>
+          <li class="header__navbarItem"><a href="../Home.html" class="header__navbarItemLink">Trang chủ</a></li>
+          <li class="header__navbarItem"><a href="../Profile.html" class="header__navbarItemLink"><img
+                src="../../Assets/img/Poseidon Of Sea Logo.png" alt="avt nhân viên" class="header__navbarAvt"></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- container-->
+    <div class="container">
+      <div class="grid wide">
+        <div class="wide row">
+          <div class="col l-2 m-0 c-0 sidebar">
+            <ul class="content__sidebarList">
+              <li id="content__sidebarItem_CANDEM" class="content__sidebarItem"><a href="QuanLyLuong.html"
+                  class="content__sidebarLink">Quản lý lương</a></li>
+              <li class="content__sidebarItem"><a href="SuaLuong.html" class="content__sidebarLink">Sửa lương</a></li>
+              <li class="content__sidebarItem"><a href="TimLuong.html" class="content__sidebarLink">Tìm lương</a></li>
+            </ul>
+          </div>
+          <div class="col l-10 m-12 c-12 content">
+            <h1>Tìm thông tin lương nhân viên</h1>
+            <div class="content__main">
+              <div class="content__Search">
+                <div class="content__SearchMethod">
+                  <select name="lang" class="content__SearchMethodCBB">
+                    <option value="">--Tìm kiếm theo--</option>
+                    <option value="name">Họ và tên</option>
+                    <option value="cccd">CCCD</option>
+                    <option value="maNV">Mã nhân viên</option>
+                  </select>
                 </div>
+                <div class="content__SearchBar">
+                  <label for="content__SearchBarInput" class="content__SearchBarLabel">Nhập thông tin: </label>
+                  <input class="content__SearchBarInput" id="content__SearchBarInput" spellcheck="false"
+                    placeholder="VD: Nguyen A, MNV000001">
+                  <button class="content__SearchBarBtn">Tìm Kiếm</button>
+                </div>
+              </div>
+              <div class="content__MiniTableArea">
+                <select name="lang" class="content__TableSort">
+                  <option value="">--Sắp xếp theo--</option>
+                  <option value="maNV">Mã lương</option>
+                  <option value="maNV">Mã nhân viên</option>
+                  <option value="name">Họ và tên</option>
+                  <option value="Thời gian">Thời gian</option>
+                  <option value="Mức lương cơ bản">Mức lương cơ bản</option>
+                  <option value="cccd">CCCD</option>
+                </select>
+                <table class="content__MiniTable">
+                  <thead>
+                    <tr class="content__TableTitle">
+                      <th class="content__TableTitle"></th>
+                      <th class="content__TableTitle">Mã lương</th>
+                      <th class="content__TableTitle">Mã nhân viên</th>
+                      <th class="content__TableTitle">Họ và tên</th>
+                      <th class="content__TableTitle">CCCD</th>
+                      <th class="content__TableTitle">Thời gian</th>
+                      <th class="content__TableTitle">Lương cơ bản</th>
+                      <th class="content__TableTitle">Thưởng</th>
+                      <th class="content__TableTitle">Phạt</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="content__InfomationDetail">
+                <label for="" class="content__InfomationLabel">Mã lương: </label>
+                <label for="" class="content__InfomationLabel">Mã nhân viên: </label>
+                <label for="" class="content__InfomationLabel">Họ và tên: </label>
+                <label for="" class="content__InfomationLabel">CCCD/CMND: </label>
+                <label for="" class="content__InfomationLabel">Thời gian: </label>
+                <label for="" class="content__InfomationLabel">Lương cơ bản: </label>
+                <label for="" class="content__InfomationLabel">Thưởng: </label>
+                <label for="" class="content__InfomationLabel">Phạt: </label>
+
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- footer -->
-        <div class="footer">
-            
-        </div>
+    <!-- footer -->
+    <div class="footer">
 
-    </div>   
+    </div>
+
+  </div>
 </body>
+
 </html>

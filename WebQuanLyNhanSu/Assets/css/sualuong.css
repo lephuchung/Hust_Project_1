@@ -1,0 +1,15 @@
+.content__Form{
+    margin-top: 0px;
+}
+
+.content__FormComponent{
+    width: 100%;
+}
+
+.content__FormTitle{
+    width: 150px;
+}
+
+.content__FormInput{
+    width: 50%;
+}
