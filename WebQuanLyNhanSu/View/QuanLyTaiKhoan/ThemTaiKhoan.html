@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../Assets/css/grid.css">
     <link rel="stylesheet" href="../../Assets/css/general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="../../Assets/js/togglePassword.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Thêm tài khoản</title>
 </head>
@@ -85,11 +86,13 @@
                                   <label class="content__FormTitle" for="password">Nhập mật khẩu: </label>
                                   <input class="content__FormInput" id="password" type="password"
                                       placeholder="VD: hunghaha" name="password">
+                                      <input type="checkbox" style="margin: 10px;" id="showPassword" onclick="togglePassword()">
                               </div>
                               <div class="content__FormComponent">
                                   <label class="content__FormTitle" for="re-password">Nhập lại mật khẩu: </label>
                                   <input class="content__FormInput" id="re-password" type="password"
                                       placeholder="VD: hunghaha" name="re-password">
+                                      <input type="checkbox" style="margin: 10px;" id="showRePassword" onclick="toggleRePassword()">
                               </div>  
                               <div class="content__FormComponent">
                                 <label class="content__FormTitle">Chọn quyền tài khoản: </label>

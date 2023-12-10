@@ -350,6 +350,7 @@ th, td {
 .content__InfomationLabel{
     width: 200px;
     font-size: 1.6rem;
+    line-height: 1.6rem;
     padding-bottom: 10px;
 }
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="password">Mật khẩu:</label>
+  <input type="password" id="password" name="password">
+  <input type="checkbox" id="showPassword" onclick="togglePassword()"> Hiển thị mật khẩu
+
+  <script>
+    function togglePassword() {
+      var passwordField = document.getElementById("password");
+      var showPasswordCheckbox = document.getElementById("showPassword");
+
+      if (showPasswordCheckbox.checked) {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    }
+  </script>
+
+</body>
+</html>
