@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/img/Poseidon Of Sea Logo.png" />
+    <link rel="stylesheet" href="/css/preset.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/general.css">
+
+    <!-- Tính theo đường dẫn của trình duyệt -->
+    <!-- Tính thoe filesysstem -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Thêm nhân viên</title>
+</head>
+
+<body>
+    <div id="main">
+        <%- include('../header.ejs')%>
+        <!-- container -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="wide row">
+                    <%- include('../sidebarNhanVien.ejs')%>
+                    <div class="col l-10 m-12 c-12 content">
+                        <h1>Thêm nhân viên</h1>
+                        <div class="content__main">
+                            <form id="AddUForm" class="content__Form" action="/QuanLyNhanVien/ThemNhanVien.ejs" method="post">
+                                <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                    <label class="content__FormTitle" for="Ten">Nhập tên nhân viên(*): </label>
+                                    <input class="content__FormInput" id="ten" type="text"
+                                        placeholder="VD: Nguyễn Văn A" name="TenNhanVien">
+                                    <% if(errors && errors.TenNhanVien){
+                                        %> <span class="text-danger"><%= errors.TenNhanVien.msg %></span>
+                                    <% } %>
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="txtDate">Nhập ngày sinh: </label>
+                                    <input type="date" class="content__FormInput" id="txtDate" min="1900-01-01"
+                                        name="txtDate">
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="DiaChi">Nhập địa chỉ: </label>
+                                    <input class="content__FormInput" id="DiaChi" type="text"
+                                        placeholder="VD: 7 Tạ Quang Bửu, Hai Bà Trưng, Hà Nội" name="DiaChi">
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle">Chọn giới tính: </label>
+                                    <div class="content__FormSubContainer">
+                                        <label class="content__FormSubTitle" for="GioiTinhNam">Nam</label>
+                                        <input class="content__FormRadioBtn" id="GioiTinhNam" type="radio" value="Nam"
+                                            name="gioitinh">
+                                        <label class="content__FormSubTitle" for="GioiTinhNu">Nữ</label>
+                                        <input class="content__FormRadioBtn" id="GioiTinhNu" type="radio" value="Nữ"
+                                            name="gioitinh">
+                                    </div>
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="SoDienThoai">Nhập số điện thoại(*): </label>
+                                    <input class="content__FormInput" id="SoDienThoai" type="text"
+                                        placeholder="VD: 0123456789" name="SoDienThoai">
+                                    <% if(errors && errors.SoDienThoai){
+                                        %> <span class="text-danger"><%= errors.SoDienThoai.msg %></span>
+                                    <% } %>
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="Email">Nhập địa chỉ email: </label>
+                                    <input class="content__FormInput" id="Email" type="text"
+                                        placeholder="VD: abc@gmail.com" name="Email">
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="QueQuan">Nhập quê quán: </label>
+                                    <input class="content__FormInput" id="QueQuan" type="text"
+                                        placeholder="VD: Hải Phòng" name="QueQuan">
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="CCCD/CMND">Nhập số CCCD/CMND(*): </label>
+                                    <input class="content__FormInput" id="CCCD/CMND" type="text"
+                                        placeholder="VD: 031203307891" name="CCCD">
+                                    <% if(errors && errors.CCCD){
+                                        %> <span class="text-danger"><%= errors.CCCD.msg %></span>
+                                    <% } %>
+                                </div>
+                                <input class="content__FormBtn" type="submit" value="Xác nhận">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../footer.ejs')%>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="/img/Poseidon Of Sea Logo.png" />
+  <link rel="stylesheet" href="/css/preset.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/grid.css">
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="/css/sua.css">
+  <link rel="preconnect" href="/https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Sửa thông tin nhân viên</title>
+</head>
+
+<body>
+  <div id="main">
+    <%- include('../header.ejs')%>
+    <!-- container -->
+    <div class="container">
+      <div class="grid wide">
+        <div class="wide row">
+          <%- include('../sidebarNhanVien.ejs')%>
+          <div class="col l-10 m-12 c-12 content">
+            <h1>Sửa thông tin nhân viên</h1>
+            <div class="content__main">
+              <div class="content__Search">
+                <form method="get" action="/QuanLyNhanVien/SuaNhanVien.ejs">
+                  <div class="content__SearchMethod">
+                    <select name="luaChonTimKiem" class="content__SearchMethodCBB">
+                      <option value="">--Tìm kiếm theo--</option>
+                      <option value="name">Họ và tên</option>
+                      <option value="identity">CCCD</option>
+                      <option value="employeeId">Mã nhân viên</option>
+                    </select>
+                  </div>
+                  <div class="content__SearchBar">
+                    <label for="content__SearchBarInput" name="tenNguoiDung" class="content__SearchBarLabel">Nhập thông tin: </label>
+                    <input class="content__SearchBarInput" name="tenNguoiDung" id="content__SearchBarInput" spellcheck="false"
+                      placeholder="VD: Nguyen A, MNV000001,...">
+                    <button class="content__SearchBarBtn">Tìm Kiếm</button>
+                  </div>
+                </form>
+              </div>
+              <div class="content__MiniTableArea">
+                <table class="content__MiniTable">
+                  <thead>
+                    <tr class="content__TableTitle">
+                      <th class="content__TableTitle">Mã nhân viên</th>
+                      <th class="content__TableTitle">Họ và tên</th>
+                      <th class="content__TableTitle">Ngày sinh</th>
+                      <th class="content__TableTitle">Giới tính</th>
+                      <th class="content__TableTitle">CCCD</th>
+                      <th class="content__TableTitle">Địa chỉ</th>
+                      <th class="content__TableTitle">Số điện thoại</th>
+                      <th class="content__TableTitle">Email</th>
+                      <th class="content__TableTitle">Quê quán</th>
+                      <th class="content__TableTitle">Tôn giáo</th>
+                      <th class="content__TableTitle">Chức vụ</th>
+                      <th class="content__TableTitle"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% for (var i = 0; i < result.length; i++) { %>
+                      <tr>
+                        <td><%= result[i].MaNhanVien %></td>
+                        <td><%= result[i].HoTen %></td>
+                        <td><%= result[i].NgaySinh %></td>
+                        <td><%= result[i].GioiTinh %></td>
+                        <td><%= result[i].SoCMNDCCCD %></td>
+                        <td><%= result[i].DiaChi %></td>
+                        <td><%= result[i].SoDienThoai %></td>
+                        <td><%= result[i].Email %></td>
+                        <td><%= result[i].QueQuan %></td>
+                        <td><%= result[i].TonGiao %></td>
+                        <td><%= result[i].ChucVu %></td>
+                        <td>
+                          <form method="get" action="/QuanLyNhanVien/FormSuaNhanVien.ejs">
+                            <input type="text" hidden name="NhanVienID" value="<%= result[i].MaNhanVien  %>"> 
+                            <button type="submit">Sửa</button>
+                          </form>
+                        </td> 
+                      </tr>    
+                     <% } %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('../footer.ejs')%>
+  </div>
+</body>
+
+</html>

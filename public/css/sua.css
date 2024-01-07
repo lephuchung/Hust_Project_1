@@ -1,0 +1,34 @@
+.content__Form{
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 300px;
+    justify-content: space-between;
+    margin: 0px 15px 0px 15px;
+}
+
+#content__FormComponent--CANDEM{
+    padding-top: 0px;
+}
+
+.content__FormComponent{
+    width: 45%;
+}
+
+.content__FormInput{
+    width: 100%;
+}
+
+.content__FormSubContainer{
+    margin: auto 0px;
+}
+
+.content__MiniTable{
+    height: 150px;
+}
+
+.content__MiniTableArea{
+    max-width: 100%;
+    overflow-x: auto;
+    max-height: 80%;
+}
+
