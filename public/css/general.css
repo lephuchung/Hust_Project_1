@@ -21,7 +21,7 @@
 }
 
 .header__navbarItem{
-    margin: 0 12px;
+    /* margin: 0 12px; */
     display: flex;
     position: relative;
 }
@@ -31,6 +31,15 @@
     text-decoration: none;
     font-size: 1.6rem;
     line-height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header__navbarItemLink:hover{
+    background-color: var(--xanh-nhat);
+    color: var(--chu);
+    font-weight: 600;
+
 }
 
 .header__navbarAvt{
@@ -147,6 +156,21 @@
     color: var(--xanh-rat-nhat);
 }
 
+.header__btnDangXuat{
+    font-size: 1.6rem;
+    background-color: var(--xanh-dam);
+    color: var(--trang);
+    border: none;
+    padding: 0rem 1rem;
+    line-height: 50px;
+}
+
+.header__btnDangXuat:hover{
+    background-color: var(--xanh-nhat);
+    color: var(--chu);
+    font-weight: 600;
+}
+
 .container {
     background-color: var(--xam);
     height: 850px;
@@ -165,6 +189,7 @@
 .content__sidebarItem{
     line-height: 3rem;
     margin: 1rem 0;
+    box-sizing: border-box;
 }
 
 #content__sidebarItem_CANDEM{
@@ -177,6 +202,13 @@
     font-weight: 500;
     line-height: 4rem;
     display: block;
+}
+
+.content__sidebarLink:hover{
+    font-weight: 600;
+    padding-left: 8px;
+    border-bottom: solid 3px var(--chu);
+    border-top: solid 3px var(--chu);
 }
 
 .content {
@@ -363,8 +395,53 @@ th, td {
     background-color: var(--vang);
 }
 
-.text-danger{
-    color: red;
-    font-size: 1.6rem;
-    padding: 10px;
+#open{
+    display: none;
 }
+.open{
+    height: 50px;
+    width: 50px;
+}
+.open i{
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color:var(--xanh-dam);
+    padding: 15px 15px;
+    color: white;
+    z-index: 99;
+}
+#open:checked ~ .content__sidebarList{
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+/* #open:checked ~ .open i{
+    transition: 0.5s;
+    margin-left: 190px;
+    position: absolute;
+} */
+.sidebar__overlay{
+    position: fixed;
+    top: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sidebar__mobile{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    top: 50px;
+    width: 320px;
+    background-color: var(--xanh-rat-nhat);
+}
+@media (max-width: 739px) {
+    .header__navbarItem{
+        display: none;
+    }
+
+}
+
