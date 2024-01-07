@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/img/Poseidon Of Sea Logo.png"/>
+    <link rel="stylesheet" href="/css/preset.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="js/togglePassword.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Thêm tài khoản</title>
+</head>
+<body>
+    <div id="main">
+      <%- include('../header.ejs')%>
+      <!-- container -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="wide row">
+                  <%- include('../sidebarTaiKhoan.ejs')%>
+                    <div class="col l-10 m-12 c-12 content">
+                        <h1>Sửa tài khoản</h1>
+                        <div class="content__main">
+                          <form id="AddUForm" class="content__Form" action="/QuanLyTaiKhoan/SuaTaiKhoan.ejs" method="post">
+                              <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                  <label class="content__FormTitle" for="MaNhanVien">Nhập mã nhân viên: </label>
+                                  <input class="content__FormInput" id="MaNhanVien" type="text"
+                                      placeholder="VD: MNV000001" name="MaNhanVien">
+                                  <% if(errors && errors.MaNhanVien){
+                                    %> <span class="text-danger"><%= errors.MaNhanVien.msg %></span>
+                                  <% } %>
+                              </div>
+                              <div class="content__FormComponent">
+                                  <label class="content__FormTitle" for="password">Nhập mật khẩu mới: </label>
+                                  <input class="content__FormInput" id="password" type="text"
+                                      placeholder="VD: hunghaha" name="MatKhau">
+                              </div>
+                              <div class="content__FormComponent">
+                                  <label class="content__FormTitle" for="re-password">Nhập lại mật khẩu mới: </label>
+                                  <input class="content__FormInput" id="re-password" type="text"
+                                      placeholder="VD: hunghaha" name="repassword">
+                              </div>  
+                              <div class="content__FormComponent">
+                                <label class="content__FormTitle">Chọn quyền tài khoản: </label>
+                                <div class="content__FormSubContainer">
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="NhanVien" type="radio" value="Quản lý nhân sự"
+                                    name="Quyen">
+                                    <label class="content__FormSubTitle" for="NhanVien">Quản lý nhân sự</label>
+                                  </div>
+                                  <div class="content__FormSubContainerItem">
+                                    <input class="content__FormRadioBtn" id="NhanVien" type="radio" value="Nhân viên"
+                                    name="Quyen">
+                                    <label class="content__FormSubTitle" for="NhanVien">Nhân viên</label>
+                                  </div>
+                                </div>
+                            </div>                            
+                              <input class="content__FormBtn" type="submit" value="Xác nhận">
+                          </form>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../footer.ejs')%>
+    </div>   
+</body>
+</html>

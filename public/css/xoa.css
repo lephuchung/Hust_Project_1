@@ -1,0 +1,11 @@
+.content__MiniTable{
+    height: 150px;
+}
+
+.content__MiniTableArea{
+    max-width: 100%;
+    overflow-x: auto;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
