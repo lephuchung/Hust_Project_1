@@ -33,18 +33,18 @@
                 </div>
 
                 <div class="header__logo">
-                    <a href="Profile.html"> <img src="../Assets/img/Poseidon Of Sea Logo.png" alt="Logo công ty"
-                            class="header__logoImg"></a>
+
+                    <img src="/img/Poseidon Of Sea Logo.png" alt="Logo công ty"
+                            class="header__logoImg">
                 </div>
             </div>
             <div class="header__navbar">
                 <ul class="header__navbarList">
-                    <li class="header__navbarItem"><a href="Help.html" class="header__navbarItemLink">Hỗ trợ</a></li>
-                    <li class="header__navbarItem"><a href="Profile.html" class="header__navbarItemLink">Trang chủ</a>
+
                     </li>
-                    <li class="header__navbarItem"><a href="Profile.html" class="header__navbarItemLink"><img
-                                src="../Assets/img/Poseidon Of Sea Logo.png" alt="avt nhân viên"
-                                class="header__navbarAvt"></a></li>
+                <li class="header__navbarItem"><a href="/DangNhap" class="header__navbarItemLink">Đăng xuất</a></li>
+                    <li class="header__navbarItem"><a href="Help.html" class="header__navbarItemLink">Hỗ trợ</a></li>
+                    <li class="header__navbarItem"><a href="Profile.ejs" class="header__navbarItemLink">Trang chủ</a></li>
                     <button class="header__btnDangXuat">Đăng xuất</button>
                 </ul>
             </div>
@@ -57,21 +57,73 @@
                         <h1>Thông tin cá nhân và lương hiện tại</h1>
                         <div class="content__main">
                             <div class="content__InfomationDetail">
-                                <label class="content__InfomationLabel" style="margin-top:20px;" for="">Họ và tên:
-                                </label>
-                                <label class="content__InfomationLabel" for="">Số CCCD/CMND: </label>
-                                <label class="content__InfomationLabel" for="">Ngày sinh: </label>
-                                <label class="content__InfomationLabel" for="">Giới tính: </label>
-                                <label class="content__InfomationLabel" for="">Địa chỉ: </label>
-                                <label class="content__InfomationLabel" for="">Số điện thoại: </label>
-                                <label class="content__InfomationLabel" for="">Địa chỉ email: </label>
-                                <label class="content__InfomationLabel" for="">Chức vụ: </label>
-                                <label class="content__InfomationLabel" for="">Quê quán: </label>
-                                <label class="content__InfomationLabel" for="">Tôn Giáo: </label>
+                                <div class="content__MiniTableArea" style="margin-top: 30px">
+                                    <label for="" style="font-size: 1.6rem;">Thông tin cá nhân:</label>
+                                    <table class="content__MiniTable" style="margin-top: 10px;">
+                                      <thead>
+                                        <tr class="content__TableTitle" >
+                                          <th class="content__TableTitle">Mã nhân viên</th>
+                                          <th class="content__TableTitle">Họ và tên</th>
+                                          <th class="content__TableTitle">Ngày sinh</th>
+                                          <th class="content__TableTitle">Giới tính</th>
+                                          <th class="content__TableTitle">CCCD</th>
+                                          <th class="content__TableTitle">Địa chỉ</th>
+                                          <th class="content__TableTitle">Số điện thoại</th>
+                                          <th class="content__TableTitle">Email</th>
+                                          <th class="content__TableTitle">Quê quán</th>
+                                          <th class="content__TableTitle">Tôn giáo</th>
+                                          <th class="content__TableTitle">Chức vụ</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <% for (var i = 0; i < 1; i++) { %>
+                                            <tr>
+                                              <td><%= result[i].MaNhanVien %></td>
+                                              <td><%= result[i].HoTen %></td>
+                                              <td><%= result[i].NgaySinh %></td>
+                                              <td><%= result[i].GioiTinh %></td>
+                                              <td><%= result[i].SoCMNDCCCD %></td>
+                                              <td><%= result[i].DiaChi %></td>
+                                              <td><%= result[i].SoDienThoai %></td>
+                                              <td><%= result[i].Email %></td>
+                                              <td><%= result[i].QueQuan %></td>
+                                              <td><%= result[i].TonGiao %></td>
+                                              <td><%= result[i].ChucVu %></td>
+                                            </tr>    
+                                           <% } %>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="content__MiniTableArea" style="margin-top: 40px;">
+                                    <label for="" style="font-size: 1.6rem;">Thông tin lương:</label>
+                                    <table class="content__MiniTable" style="margin-top: 10px;">
+                                      <thead>
+                                        <tr class="content__TableTitle">
+                                            <th class="content__TableTitle">Mã lương</th>
+                                            <th class="content__TableTitle">Thời gian</th>
+                                            <th class="content__TableTitle">Lương cơ bản</th>
+                                            <th class="content__TableTitle">Thưởng</th>
+                                            <th class="content__TableTitle">Phạt</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <% for (var i = 0; i < result.length; i++) { %>
+                                            <tr>
+                                              <td><%= result[i].MaLuong %></td>
+                                              <td><%= result[i].ThoiGian %></td>
+                                              <td><%= result[i].LuongCoBan %></td>
+                                              <td><%= result[i].Thuong %></td>
+                                              <td><%= result[i].Phat %></td>
+                                            </tr>    
+                                           <% } %>
+                                      </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <div class="content__mainLuong">
                                 <!-- chỗ này điền bảng lương nhé -->
-                            </div>
+
+
                         </div>
                     </div>
                 </div>

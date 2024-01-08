@@ -44,6 +44,8 @@ nhanvienRouter.get("/FormSuaNhanVien.ejs", async (req,res) => {
 })
 
 nhanvienRouter.post("/SuaNhanVien.ejs", async (req, res) => {
+    const HoTen = req.body.HoTen;
+    const SoDienThoai = req.body.SoDienThoai;
     const SoCMNDCCCD = req.body.SoCMNDCCCD;
     const NgaySinh = req.body.NgaySinh;
     const TonGiao = req.body.TonGiao;
@@ -52,6 +54,7 @@ nhanvienRouter.post("/SuaNhanVien.ejs", async (req, res) => {
     const DiaChi = req.body.DiaChi;
     const QueQuan = req.body.QueQuan;
     const GioiTinh = req.body.GioiTinh;
+    if(SoCMNDCCCD.length == 0 ||)
     let query = `update NhanVien set NgaySinh = N'${NgaySinh}', TonGiao = N'${TonGiao}', ChucVu = N'${ChucVu}', Email = N'${Email}', DiaChi = N'${DiaChi}', QueQuan = N'${QueQuan}', GioiTinh = N'${GioiTinh}' WHERE SoCMNDCCCD='${SoCMNDCCCD}'`;
     await sql.query(query)
     query = `select distinct nv.MaNhanVien, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.SoCMNDCCCD ,nv.DiaChi, nv.SoDienThoai, nv.Email, nv.QueQuan, nv.TonGiao, nv.ChucVu from NhanVien as nv`
@@ -82,6 +85,9 @@ nhanvienRouter.post("/ThemNhanVien.ejs",
         check('CCCD').isNumeric().withMessage('Bạn cần điền đúng định dạng số CDCD/CMND!'),
         check('CCCD').notEmpty().withMessage('Bạn cần điền số CDCD/CMND!'),
         check('CCCD').isLength({min: 12, max: 12}).withMessage('Bạn cần nhập đầy đủ số CCCD/CMND!'),
+        check('LuongCoBan').notEmpty().withMessage('Bạn cần điền lương!'),
+        check('LuongCoBan').isNumeric().withMessage('Bạn cần điền đúng định dạng lương!'),
+        check('LuongCoBan').isLength({min: 5, max: 10}).withMessage('Bạn cần nhập đầy đủ số CCCD/CMND!'),
     ] , async (req, res) => {
         const errors = validationResult(req);
         if(!errors.isEmpty()){

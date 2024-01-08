@@ -176,6 +176,10 @@
     height: 850px;
 }
 
+html{
+    background-color: var(--xam);
+}
+
 .sidebar {
     background-color: var(--xanh-rat-nhat);
     height: 850px;
@@ -391,7 +395,9 @@ th, td {
 }
 
 .footer {
-    position:fixed;
+    position:absolute;
+    left: 0;
+    right: 0;
     bottom: 0px;
     height: 150px;
     background-color: var(--vang);

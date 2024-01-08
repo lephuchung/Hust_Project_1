@@ -86,6 +86,19 @@
                                         %> <span class="text-danger"><%= errors.CCCD.msg %></span>
                                     <% } %>
                                 </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="LuongCoBan">Nhập lương cơ bản: </label>
+                                    <input class="content__FormInput" id="LuongCoBan" type="text"
+                                        placeholder="VD: 500000" name="LuongCoBan">
+                                        <% if(errors && errors.LuongCoBan){
+                                            %> <span class="text-danger"><%= errors.LuongCoBan.msg %></span>
+                                        <% } %>
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="ChucVu">Nhập chức vụ: </label>
+                                    <input class="content__FormInput" id="ChucVu" type="text"
+                                        placeholder="VD: Trưởng phòng hành chính" name="ChucVu">
+                                </div>
                                 <input class="content__FormBtn" type="submit" value="Xác nhận">
                             </form>
                         </div>
