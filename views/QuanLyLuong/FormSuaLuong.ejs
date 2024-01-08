@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/img/Poseidon Of Sea Logo.png" />
+    <link rel="stylesheet" href="/css/preset.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Thêm nhân viên</title>
+</head>
+
+<body>
+    <div id="main">
+        <%- include('../header.ejs')%>
+        <!-- container -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="wide row">
+                    <%- include('../sidebarLuong.ejs')%>
+                    <div class="col l-10 m-12 c-12 content">
+                        <h1>Sửa Lương</h1>
+                        <div class="content__main">
+                            <form id="AddUForm" class="content__Form" action="/QuanLyLuong/SuaLuong.ejs" method="post">
+                                <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                    <label class="content__FormTitle" for="Ten">Mã lương: </label>
+                                    <input class="content__FormInput" id="ten" type="text"
+                                        placeholder="VD: Nguyễn Văn A" name="MaLuong" value="<%= result.MaLuong %>" readonly>
+                                </div>
+                                <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                    <label class="content__FormTitle" for="Ten">Mã nhân viên: </label>
+                                    <input class="content__FormInput" id="ten" type="text"
+                                        placeholder="VD: Nguyễn Văn A" name="MaNhanVien" value="<%= result.MaNhanVien %>" readonly>
+                                </div>
+                                <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                    <label class="content__FormTitle" for="Ten">Tên nhân viên: </label>
+                                    <input class="content__FormInput" id="ten" type="text"
+                                        placeholder="VD: Nguyễn Văn A" name="HoTen" value="<%= result.HoTen %>" readonly>
+                                </div>
+                                <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                    <label class="content__FormTitle" for="Ten">Căn cước công dân: </label>
+                                    <input class="content__FormInput" id="ten" type="text"
+                                        placeholder="VD: Nguyễn Văn A" name="SoCMNDCCCD" value="<%= result.SoCMNDCCCD %>" readonly>
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="Email">Nhập lương cơ bản: </label>
+                                    <input class="content__FormInput" id="Email" type="number" min="0"
+                                        placeholder="VD: abc@gmail.com" name="LuongCoBan" value="<%= result.LuongCoBan %>">
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="Email">Nhập thưởng: </label>
+                                    <input class="content__FormInput" id="Email" type="number" min="0"
+                                        placeholder="VD: abc@gmail.com" name="Thuong" value="<%= result.Thuong %>">
+                                </div>
+                                <div class="content__FormComponent">
+                                    <label class="content__FormTitle" for="Email">Nhập phạt: </label>
+                                    <input class="content__FormInput" id="Email" type="number" min="0"
+                                        placeholder="VD: abc@gmail.com" name="Phat" value="<%= result.Phat %>">
+                                </div>
+                                <input class="content__FormBtn" type="submit" value="Lưu">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../footer.ejs')%>
+    </div>
+</body>
+
+</html>
