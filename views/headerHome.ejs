@@ -1,0 +1,51 @@
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>        <div class="header">
+    <div style="display: flex;">
+      <div class="grid wide">
+        <div class="col l-0 header_sidebarBtn" >
+        <input type="checkbox" name="open" id="open">
+        <label for="open" class="open">
+            <i class="fas fa-bars"></i>
+        </label>
+        <%- include('sidebarHome.ejs')%>
+      </div>
+      </div>
+    <div class="header__logo">
+        <a href="/Home"> <img src="/img/Poseidon Of Sea Logo.png" alt="Logo công ty" class="header__logoImg" ></a>
+    </div>
+    <div class="header__navbar">
+        <ul class="header__navbarList">
+            <li class="header__navbarItem"><a id="chucnang" class="header__navbarItemLink" href="">Chức năng &nbsp<i class="ti-angle-down"></i> </a>
+                <i class="ti-angle-down"></i>
+                <ul class="header__subnav">
+                  <li class="header__subnavListItem">
+                    <a class="header__subnavLink" href="/QuanLyNhanVien/QuanLyNhanVien.ejs">Quản lý nhân viên</a>
+                    <ul class="header__subSubnav">
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="/QuanLyNhanVien/ThemNhanVien.ejs">Thêm nhân viên</a></li>
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="/QuanLyNhanVien/SuaNhanVien.ejs">Sửa nhân viên</a></li>
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="/QuanLyNhanVien/XoaNhanVien.ejs">Xóa nhân viên</a></li>
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="/QuanLyNhanVien/TimNhanVien.ejs">Tìm kiếm nhân viên</a></li>
+                    </ul>
+                  </li>
+                  <li class="header__subnavListItem">
+                    <a class="header__subnavLink" href="/QuanLyLuong/QuanLyLuong.ejs">Quản lý lương</a>
+                    <ul class="header__subSubnav">
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyLuong/SuaLuong.ejs">Sửa lương</a></li>
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="../QuanLyLuong/TimLuong.ejs">Tìm lương</a></li>
+                    </ul>
+                  </li>
+                  <li class="header__subnavListItem">
+                    <a class="header__subnavLink" href="/QuanLyTaiKhoan/QuanLyTaiKhoan.ejs">Quản lý tài khoản</a>
+                    <ul class="header__subSubnav">
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="/QuanLyTaiKhoan/ThemTaiKhoan.ejs">Thêm tài khoản</a></li>
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="/QuanLyTaiKhoan/SuaTaiKhoan.ejs">Sửa tài khoản</a></li>
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="/QuanLyTaiKhoan/XoaTaiKhoan.ejs">Xóa tài khoản</a></li>
+                      <li class="header__subSubnavListItem"><a class="header__subSubnavLink" href="/QuanLyTaiKhoan/TimTaiKhoan.ejs">Tìm tài khoản</a></li>
+                    </ul>
+                  </li>
+                </ul></li>
+            <li class="header__navbarItem"><a href="/Home" class="header__navbarItemLink">Trang chủ</a></li>
+            <li class="header__navbarItem"><a href="/DangNhap" class="header__navbarItemLink">Đăng xuất</a></li>
+          </ul>
+    </div>
+  
