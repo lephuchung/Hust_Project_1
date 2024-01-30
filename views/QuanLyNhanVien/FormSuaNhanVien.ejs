@@ -28,6 +28,11 @@
                         <div class="content__main">
                             <form id="AddUForm" class="content__Form" action="/QuanLyNhanVien/SuaNhanVien.ejs" method="post">
                                 <div class="content__FormComponent" id="content__FormComponent--CANDEM">
+                                    <label class="content__FormTitle" for="Ten">Mã nhân viên: </label>
+                                    <input class="content__FormInput" id="ten" type="text"
+                                        placeholder="VD: Nguyễn Văn A" name="MaNhanVien" value="<%= result.MaNhanVien %>" readonly>
+                                </div>
+                                <div class="content__FormComponent" id="content__FormComponent--CANDEM">
                                     <label class="content__FormTitle" for="Ten">Nhập tên nhân viên(*): </label>
                                     <input class="content__FormInput" id="ten" type="text"
                                         placeholder="VD: Nguyễn Văn A" name="HoTen" value="<%= result.HoTen %>" >

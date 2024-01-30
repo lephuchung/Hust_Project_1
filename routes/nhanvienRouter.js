@@ -44,6 +44,7 @@ nhanvienRouter.get("/FormSuaNhanVien.ejs", async (req,res) => {
 })
 
 nhanvienRouter.post("/SuaNhanVien.ejs", async (req, res) => {
+    const MaNhanVien = req.body.MaNhanVien;
     const HoTen = req.body.HoTen;
     const SoDienThoai = req.body.SoDienThoai;
     const SoCMNDCCCD = req.body.SoCMNDCCCD;
@@ -54,9 +55,15 @@ nhanvienRouter.post("/SuaNhanVien.ejs", async (req, res) => {
     const DiaChi = req.body.DiaChi;
     const QueQuan = req.body.QueQuan;
     const GioiTinh = req.body.GioiTinh;
-    if(SoCMNDCCCD.length == 0 ||)
-    let query = `update NhanVien set NgaySinh = N'${NgaySinh}', TonGiao = N'${TonGiao}', ChucVu = N'${ChucVu}', Email = N'${Email}', DiaChi = N'${DiaChi}', QueQuan = N'${QueQuan}', GioiTinh = N'${GioiTinh}' WHERE SoCMNDCCCD='${SoCMNDCCCD}'`;
-    await sql.query(query)
+    let regex = /^[0-9]+$/;
+    if(SoCMNDCCCD.length == 12 || regex.test(SoCMNDCCCD) || regex.test(SoDienThoai) || SoCMNDCCCD.length == 10){
+        let query = `select * from NhanVien where SoCMNDCCCD = '${SoCMNDCCCD}'`
+        const test = (await (sql.query(query))).recordset;
+        if(test.length != 0){
+            query = `update NhanVien set Hoten = N'${HoTen}', SoDienThoai = N'${SoDienThoai}', SoCMNDCCCD = N'${SoCMNDCCCD}' ,NgaySinh = N'${NgaySinh}', TonGiao = N'${TonGiao}', ChucVu = N'${ChucVu}', Email = N'${Email}', DiaChi = N'${DiaChi}', QueQuan = N'${QueQuan}', GioiTinh = N'${GioiTinh}' WHERE MaNhanVien ='${MaNhanVien}'`.toString();
+            const test1 = (await sql.query(query)).recordset
+        }    
+    }
     query = `select distinct nv.MaNhanVien, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.SoCMNDCCCD ,nv.DiaChi, nv.SoDienThoai, nv.Email, nv.QueQuan, nv.TonGiao, nv.ChucVu from NhanVien as nv`
     const result = (await sql.query(query)).recordset;
     const formatedResult = result.map(record => {
@@ -105,8 +112,9 @@ nhanvienRouter.post("/ThemNhanVien.ejs",
                 const sdt = req.body.SoDienThoai;
                 const email = req.body.Email;
                 const queQuan = req.body.QueQuan;
-                const themNhanVien = `INSERT INTO NhanVien (HoTen, NgaySinh, SoDienThoai, Email, SoCMNDCCCD, DiaChi, QueQuan, GioiTinh) VALUES    
-                (N'${name}', N'${birth}', N'${sdt}', N'${email}', N'${ID}', N'${DiaChi}', N'${queQuan}', N'${gender}')`.toString();
+                const ChucVu = req.body.ChucVu;
+                const themNhanVien = `INSERT INTO NhanVien (HoTen, NgaySinh, SoDienThoai, Email, SoCMNDCCCD, DiaChi, QueQuan, GioiTinh, ChucVu) VALUES    
+                (N'${name}', N'${birth}', N'${sdt}', N'${email}', N'${ID}', N'${DiaChi}', N'${queQuan}', N'${gender}', N'${ChucVu}')`.toString();
                 await sql.query(themNhanVien)
             };
             res.render("../views/QuanLyNhanVien/ThemNhanVien.ejs", {errors: [] });

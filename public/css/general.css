@@ -442,7 +442,7 @@ th, td {
 }
 #open:checked ~ .sidebar__mobile{
     transition: 0.5s;
-    transform: translateX(0%);
+    transform: translateX(100%);
 }
 #open:checked ~.sidebar__overlay{
     display: block;
@@ -463,3 +463,8 @@ th, td {
     }
 }
 
+.text-danger{
+    color: red;
+    font-size: 1.6rem;
+    padding: 10px;
+}
